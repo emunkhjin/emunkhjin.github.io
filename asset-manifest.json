@@ -1,15 +1,15 @@
 {
-  "main.css": "/mobile/static/css/main.29a8d17b.chunk.css",
-  "main.js": "/mobile/static/js/main.4865383b.chunk.js",
-  "main.js.map": "/mobile/static/js/main.4865383b.chunk.js.map",
-  "static/css/1.0abd3961.chunk.css": "/mobile/static/css/1.0abd3961.chunk.css",
-  "static/js/1.43001593.chunk.js": "/mobile/static/js/1.43001593.chunk.js",
-  "static/js/1.43001593.chunk.js.map": "/mobile/static/js/1.43001593.chunk.js.map",
-  "runtime~main.js": "/mobile/static/js/runtime~main.541bebf9.js",
-  "runtime~main.js.map": "/mobile/static/js/runtime~main.541bebf9.js.map",
-  "static/css/main.29a8d17b.chunk.css.map": "/mobile/static/css/main.29a8d17b.chunk.css.map",
-  "static/css/1.0abd3961.chunk.css.map": "/mobile/static/css/1.0abd3961.chunk.css.map",
-  "index.html": "/mobile/index.html",
-  "precache-manifest.1ec446456bf71fc2a020aa04c6240e4f.js": "/mobile/precache-manifest.1ec446456bf71fc2a020aa04c6240e4f.js",
-  "service-worker.js": "/mobile/service-worker.js"
+  "main.css": "/emunkhjin/emunkhjin.github.io.git/static/css/main.29a8d17b.chunk.css",
+  "main.js": "/emunkhjin/emunkhjin.github.io.git/static/js/main.f2963a43.chunk.js",
+  "main.js.map": "/emunkhjin/emunkhjin.github.io.git/static/js/main.f2963a43.chunk.js.map",
+  "static/css/1.0abd3961.chunk.css": "/emunkhjin/emunkhjin.github.io.git/static/css/1.0abd3961.chunk.css",
+  "static/js/1.baabc03d.chunk.js": "/emunkhjin/emunkhjin.github.io.git/static/js/1.baabc03d.chunk.js",
+  "static/js/1.baabc03d.chunk.js.map": "/emunkhjin/emunkhjin.github.io.git/static/js/1.baabc03d.chunk.js.map",
+  "runtime~main.js": "/emunkhjin/emunkhjin.github.io.git/static/js/runtime~main.3ab9beaf.js",
+  "runtime~main.js.map": "/emunkhjin/emunkhjin.github.io.git/static/js/runtime~main.3ab9beaf.js.map",
+  "static/css/main.29a8d17b.chunk.css.map": "/emunkhjin/emunkhjin.github.io.git/static/css/main.29a8d17b.chunk.css.map",
+  "static/css/1.0abd3961.chunk.css.map": "/emunkhjin/emunkhjin.github.io.git/static/css/1.0abd3961.chunk.css.map",
+  "index.html": "/emunkhjin/emunkhjin.github.io.git/index.html",
+  "precache-manifest.32f277de0817817e4a23a375f4154618.js": "/emunkhjin/emunkhjin.github.io.git/precache-manifest.32f277de0817817e4a23a375f4154618.js",
+  "service-worker.js": "/emunkhjin/emunkhjin.github.io.git/service-worker.js"
 }
