@@ -42,26 +42,41 @@ class Show extends Component {
       <div class="container">
         <div class="panel panel-default">
           <div class="panel-heading">
-          <h4><Link to="/">iRoad</Link></h4>
+          <h4><Link to="/">Буцах</Link></h4>
             {/* <h3 class="panel-title">
               {this.state.board.text}
             </h3> */}
           </div>
+
+
+          
+
+
+
           <div class="panel-body">
-            <dl>
-            <dt>Мэдээлэл :</dt>
-              <dd>{this.state.board.text}</dd>
-              <dt>Зураг:</dt>
-              <dd><img src={this.state.board.photo} alt={this.state.board.text} width="600" height="600"/></dd>
-              <dt>Байршил:</dt>
+            
+
+          <div className="card mb-3" style={{maxWidth: 540}}>
+  <div className="row no-gutters">
+    <div className="col-md-4">
+      <img src={this.state.board.photo} alt={this.state.board.text} className="card-img" />
+    </div>
+    <div className="col-md-8">
+      <div className="card-body">
+        <h5 className="card-title"><dt>Мэдээлэл :</dt>
+              <dd>{this.state.board.text}</dd></h5>
+        <p className="card-text"><dt>Байршил:</dt>
               
               <dd><a target="_blank" href={`https://www.google.com/maps/place/${this.state.board.latitude},${this.state.board.longtitude}`}>{this.state.board.latitude},{this.state.board.longtitude}</a></dd>
-              
-              <dt>Мэдээлсэн:</dt>
-              <dd>{this.state.board.email}</dd>
-              
-              
-            </dl>
+              </p>
+        <p className="card-text"><small className="text-muted"><dt>Мэдээлсэн:</dt>
+              <dd>{this.state.board.email}</dd></small></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
             {/* <Link to={`/edit/${this.state.key}`} class="btn btn-success">Edit</Link>&nbsp; */}
             <button onClick={this.delete.bind(this, this.state.key)} class="btn btn-danger">Устгах</button>
           </div>

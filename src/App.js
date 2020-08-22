@@ -17,7 +17,7 @@ class App extends Component {
   onCollectionUpdate = (querySnapshot) => {
     const Evdrel = [];
     querySnapshot.forEach((doc) => {
-      const { bairshil, email, photo, text, latitude, longtitude, date } = doc.data();
+      const { bairshil, email, photo, text, latitude, longtitude, date, cat } = doc.data();
       Evdrel.push({
         key: doc.id,
         doc, // DocumentSnapshot
@@ -28,6 +28,7 @@ class App extends Component {
         latitude, 
         longtitude,
         date,
+        cat
       });
     });
     this.setState({
@@ -52,37 +53,52 @@ class App extends Component {
           </div>
           <div class="panel-body">
             {/* <h4><Link to="/create" class="btn btn-primary">Add Board</Link></h4> */}
-            <table class="table table-stripe table-hover  table-responsive">
-            <thead class="thead-dark">
-                <tr>
-                  <th>Мэдээлэл</th>
-                  <th>Зураг</th>
-                  <th>Байршил</th>
-                  <th>Мэдээлсэн</th>
-                </tr>
-              </thead>
-              <tbody>
+
+
+            <div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4">Fluid jumbotron</h1>
+    <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+  </div>
+</div>
+
+
+
                 {this.state.Evdrel.map(board =>
-                  <tr>
-                   
-                    <td><Link to={`/show/${board.key}`}><h4>{board.text}</h4></Link></td>
-                    <td><img src={board.photo} alt={board.text} width="200" height="200" class="figure-img img-fluid rounded zoom"/></td>
-                    <td><a target="_blank" href={`https://www.google.com/maps/place/${board.latitude},${board.longtitude}`}>{board.latitude},{board.longtitude}</a></td>
-                    <td>{board.email}</td>
-                  </tr>
+                
+                 
+            <div className="card mb-3 border " style={{maxWidth: 540}}>
+              <div className="row no-gutters">
+                <div className="col-md-4">
+                  <img src={board.photo} className="card-img border border-danger" alt={board.text} />
+                </div>
+                <div className="col-md-8">
+                  <div className="card-body ">
+                  
+                    <h5 className="card-title text-center"><a class="text-danger" href={`/show/${board.key}`}>{board.text}</a><small className="badge badge-danger float-right">{board.cat}</small></h5>
+                    <p className="card-text"><small className="text-muted">Илгээсэн : {board.email}</small></p>
+                    <p className="card-text"><small className="text-muted">Хүсэлт дугаар : {board.doc.id}</small></p>
+                    <p className="card-text"><a className="btn btn-outline-danger btn-lg" target="_blank" href={`https://www.google.com/maps/place/${board.latitude},${board.longtitude}`}>
+                      <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-geo" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+  <path d="M11 4a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+  <path d="M7.5 4h1v9a.5.5 0 0 1-1 0V4z"/>
+  <path fill-rule="evenodd" d="M6.489 12.095a.5.5 0 0 1-.383.594c-.565.123-1.003.292-1.286.472-.302.192-.32.321-.32.339 0 .013.005.085.146.21.14.124.372.26.701.382.655.246 1.593.408 2.653.408s1.998-.162 2.653-.408c.329-.123.56-.258.701-.382.14-.125.146-.197.146-.21 0-.018-.018-.147-.32-.339-.283-.18-.721-.35-1.286-.472a.5.5 0 1 1 .212-.977c.63.137 1.193.34 1.61.606.4.253.784.645.784 1.182 0 .402-.219.724-.483.958-.264.235-.618.423-1.013.57-.793.298-1.855.472-3.004.472s-2.21-.174-3.004-.471c-.395-.148-.749-.336-1.013-.571-.264-.234-.483-.556-.483-.958 0-.537.384-.929.783-1.182.418-.266.98-.47 1.611-.606a.5.5 0 0 1 .595.383z"/>
+</svg></a></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
                 )}
-              </tbody>
-            </table>
+              
+
           </div>
         </div>
       </div>
     );
   }
 }
-const mapStyles = {
-  width: '30%',
-  height: '20%'
-};
+
 
 // export default App;
 export default (App);
